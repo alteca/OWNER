@@ -1,0 +1,28 @@
+seed = 100
+model = "ner"
+save_state = "load_finetuned"
+save_path = "./checkpoints/ner/pilener/100"
+
+[data]
+train_dataset_path = "data/pile-ner/train.json"
+train_dataset_name = "pilener"
+test_dataset_path = "data/i2b2/test.json"
+test_dataset_name = "i2b2"
+
+[mention_detection]
+plm_name = "microsoft/deberta-v3-base"
+max_len = 256
+batch_size = 32
+num_epochs = 4
+learning_rate = 2e-5
+
+[entity_typing]
+template = "{sentence} {entity} is a [MASK]."
+plm_name = "bert-base-uncased"
+max_len = 256
+batch_size = 128
+num_epochs = 4
+learning_rate = 2e-5
+k_min = 2
+k_max = 30
+k_step = 2

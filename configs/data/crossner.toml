@@ -1,0 +1,5 @@
+data_type = "crossner"
+train_path = "./data/.raw/crossner/ai/train.txt"
+dev_path = "./data/.raw/crossner/ai/dev.txt"
+test_path = "./data/.raw/crossner/ai/test.txt"
+output_folder = "./data/crossner/ai"

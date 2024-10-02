@@ -1,0 +1,39 @@
+seed = 100
+# Either "ner": end-to-end NER
+#        "mention_detection": only Mention Detection
+#        "entity_typing" : only Entity Typing
+model = "ner"
+
+# Either: "save_finetuned": OWNER will be trained and saved to "save_path"
+#         "load_finetuned": OWNER will be loaded from "save_path" (and not trained)
+save_state = "save_finetuned"
+save_path = "./checkpoints/ner/pilener/100"
+
+[data]
+train_dataset_path = "data/pile-ner/train.json"
+train_dataset_name = "pile-ner"
+test_dataset_path = "data/crossner/ai/test.json"
+test_dataset_name = "crossner-ai"
+
+[mention_detection]
+plm_name = "microsoft/deberta-v3-base"
+max_len = 256
+batch_size = 32
+num_epochs = 4
+learning_rate = 2e-5
+
+[entity_typing]
+template = "{sentence} {entity} is a [MASK]."
+plm_name = "bert-base-uncased"
+max_len = 256
+batch_size = 128
+num_epochs = 4
+learning_rate = 2e-5
+# Parameters to control clustering
+# k_min: minimum number of clusters to consider (inclusive)
+# k_max : maximum number of clusters to consider (inclusive)
+# k_step: step for iteration
+# Equivalent to range(k_min, k_max+1, k_step)
+k_min = 2
+k_max = 30
+k_step = 2

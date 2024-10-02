@@ -1,0 +1,5 @@
+data_type = "conll2003"
+train_path = "./data/.raw/conll2003/train.txt"
+dev_path = "./data/.raw/conll2003/valid.txt"
+test_path = "./data/.raw/conll2003/test.txt"
+output_folder = "./data/conll2003"

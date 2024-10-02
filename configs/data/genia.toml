@@ -1,0 +1,3 @@
+data_type = "genia"
+# Data is downloaded from https://huggingface.co/datasets/Rosenberg/genia
+output_folder = "./data/genia"

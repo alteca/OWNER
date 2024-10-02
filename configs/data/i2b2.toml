@@ -1,0 +1,5 @@
+data_type = "i2b2"
+train_path = "./data/.raw/i2b2/train"
+dev_path = "./data/.raw/i2b2/dev"
+test_path = "./data/.raw/i2b2/test"
+output_folder = "./data/i2b2"

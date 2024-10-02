@@ -1,0 +1,4 @@
+data_type = "mit"
+train_path = "./data/.raw/mit/movie/train.txt"
+test_path = "./data/.raw/mit/movie/test.txt"
+output_folder = "./data/mit/movie"

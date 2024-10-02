@@ -1,0 +1,29 @@
+seed = $seed
+model = "ner"
+save_state = "$save_state"
+save_path = "checkpoints/owner/$train_dataset_name/$seed"
+
+[data]
+train_dataset_path = "data/$train_dataset_path/train.json"
+train_dataset_name = "$train_dataset_name"
+test_dataset_path = "data/$test_dataset_path/test.json"
+test_dataset_name = "$test_dataset_name"
+
+[mention_detection]
+plm_name = "microsoft/deberta-v3-base"
+max_len = 256
+embedding_batch_size = 32
+batch_size = 32
+num_epochs = 4
+learning_rate = 2e-5
+
+[entity_typing]
+k_max = $k_max
+k_step = $k_step
+batch_size = 128
+template = "{sentence} {entity} is a [MASK]."
+plm_name = "bert-base-uncased"
+max_len = 256
+num_epochs = 4
+learning_rate = 2e-5
+k_min = 2

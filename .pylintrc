@@ -1,0 +1,5 @@
+[FORMAT]
+good-names=i,j,k,x,y,z,N,mu,ax,tp,fn,tn,fp,pp,p,pn,n,K,X
+
+[TYPECHECK]
+generated-members=torch.*

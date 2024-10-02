@@ -1,0 +1,5 @@
+data_type = "gum"
+test_path = "./data/.raw/gum/coref/gum/conll" # You need to download their GitHub repository
+output_folder = "./data/gum"
+nested = true                                # Keep nested entities
+remove_abstract = false                      # Do not remove abstract entities

@@ -1,0 +1,5 @@
+data_type = "gum"
+test_path = "./data/.raw/gentle/test"
+output_folder = "./data/gentle"
+nested = true                         # Keep nested entities
+remove_abstract = false               # Do not remove abstract entities

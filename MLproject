@@ -1,0 +1,8 @@
+name: OWNER
+conda_env: env.yml
+
+entry_points:
+  ner:
+    parameters:
+      config_file: path
+    command: 'python3 -m owner.main --config-file="{config_file}"'

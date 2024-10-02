@@ -1,0 +1,3 @@
+test_dataset_name = "crossner-ai"
+test_dataset_path = "data/crossner/ai/test.json"
+test_prediction_path = "results/uniner_uns-crossner_ai.json"
